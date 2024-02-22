@@ -1,0 +1,1 @@
+Pasta que serve para fazer uploads dos arquivos
