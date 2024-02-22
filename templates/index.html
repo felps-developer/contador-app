@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Palavras</title>
+</head>
+<body>
+    <h1>Calculadora de Palavras</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf,.docx" required><br><br>
+        Valor por palavra: <input type="text" name="value_per_word" required><br><br>
+        <input type="submit" value="Calcular">
+    </form>
+    {% if result %}
+    <h2>Resultado da operação: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
